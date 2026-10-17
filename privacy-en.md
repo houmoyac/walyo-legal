@@ -1,4 +1,6 @@
 ---
+title: Privacy policy
+lang: en
 ---
 # Walyo Privacy Policy
 
@@ -15,7 +17,7 @@ Walyo is an app for keeping track of your subscriptions (amounts, payment dates,
 
 ## Who is responsible
 
-Yacine Houmor (an individual), France. Walyo is published under the name "Houmor Studio", which is not a company.
+Walyo is published by Yacine Houmor, as an individual, under the brand name “Houmor Studio” (France).
 Contact: walyo.app@gmail.com
 
 ## The information we keep

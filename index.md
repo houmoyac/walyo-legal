@@ -1,4 +1,6 @@
 ---
+title: Walyo
+lang: fr
 ---
 # Walyo
 

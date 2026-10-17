@@ -1,4 +1,6 @@
 ---
+title: Politique de confidentialité
+lang: fr
 ---
 # Politique de confidentialité de Walyo
 
@@ -15,7 +17,7 @@ Walyo est une application qui sert à suivre vos abonnements (montants, dates de
 
 ## Qui est responsable
 
-Yacine Houmor (personne physique), France. Walyo est publiée sous le nom « Houmor Studio », qui n'est pas une société.
+Walyo est éditée par Yacine Houmor, à titre personnel, sous le nom de marque « Houmor Studio » (France).
 Contact : walyo.app@gmail.com
 
 ## Les informations que nous conservons

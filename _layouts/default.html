@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="{{ page.lang | default: 'fr' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#5B46F0">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}Walyo</title>
+  <style>
+    :root {
+      --bg: #F5F5F9; --card: #FFFFFF; --text: #15151C; --muted: #6A6A7A;
+      --border: #E4E4EC; --accent: #7C6CFF; --deep: #5B46F0; --soft: #5B46F0;
+      --tint: rgba(124,108,255,.10); --shadow: 0 10px 30px rgba(27,27,58,.06), 0 1px 3px rgba(27,27,58,.04);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #09090D; --card: #131319; --text: #F4F4F8; --muted: #9A9AAC;
+        --border: #26262F; --soft: #A99CFF; --tint: rgba(124,108,255,.16); --shadow: none;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font: 16px/1.65 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      position: relative; min-height: 100vh;
+    }
+    body::before {
+      content: ""; position: absolute; z-index: -1; top: -160px; left: -120px; width: 440px; height: 440px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(124,108,255,.30), rgba(124,108,255,0) 70%);
+    }
+    header { max-width: 780px; margin: 0 auto; padding: 22px 20px 6px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .brand { display: flex; align-items: center; gap: 11px; text-decoration: none; color: var(--text); margin-right: auto; }
+    .mark { width: 40px; height: 40px; border-radius: 13px; background: linear-gradient(135deg, var(--accent), var(--deep)); display: grid; place-items: center; box-shadow: 0 6px 16px rgba(91,70,240,.35); }
+    .mark svg { width: 22px; height: 22px; fill: none; stroke: #fff; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+    .brand b { font-size: 22px; font-weight: 800; letter-spacing: -.6px; }
+    nav { display: flex; gap: 8px; flex-wrap: wrap; }
+    nav a { text-decoration: none; font-size: 13.5px; font-weight: 700; color: var(--muted); padding: 8px 13px; border-radius: 999px; border: 1px solid var(--border); background: var(--card); }
+    nav a[aria-current="page"] { color: #fff; background: linear-gradient(135deg, var(--accent), var(--deep)); border-color: transparent; box-shadow: 0 6px 14px rgba(91,70,240,.28); }
+    main { max-width: 780px; margin: 14px auto 0; padding: 0 16px 40px; }
+    article { background: var(--card); border: 1px solid var(--border); border-radius: 26px; padding: 30px 26px 26px; box-shadow: var(--shadow); }
+    h1 { font-size: 31px; line-height: 1.15; letter-spacing: -1px; font-weight: 800; margin: 0 0 10px; }
+    h2 { font-size: 21px; letter-spacing: -.4px; font-weight: 800; margin: 34px 0 10px; display: flex; align-items: center; gap: 10px; }
+    h2::before { content: ""; width: 5px; height: 22px; border-radius: 3px; background: linear-gradient(var(--accent), var(--deep)); flex: none; }
+    h3 { font-size: 17px; font-weight: 800; margin: 24px 0 8px; color: var(--soft); }
+    p, li { color: var(--text); }
+    em { color: var(--muted); }
+    article > p:first-of-type > em:only-child { display: inline-block; font-size: 13px; font-style: normal; font-weight: 700; color: var(--soft); background: var(--tint); padding: 5px 12px; border-radius: 999px; }
+    a { color: var(--soft); font-weight: 600; text-underline-offset: 3px; }
+    ul { padding-left: 4px; list-style: none; }
+    ul li { position: relative; padding-left: 22px; margin: 9px 0; }
+    ul li::before { content: ""; position: absolute; left: 3px; top: .72em; width: 8px; height: 8px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--deep)); }
+    ol { padding-left: 22px; } ol li::marker { color: var(--soft); font-weight: 800; }
+    table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 16px 0; border: 1px solid var(--border); border-radius: 18px; overflow: hidden; font-size: 14.5px; }
+    th { text-align: left; font-size: 12.5px; letter-spacing: .5px; text-transform: uppercase; color: var(--muted); background: var(--tint); padding: 11px 14px; }
+    td { padding: 12px 14px; vertical-align: top; border-top: 1px solid var(--border); }
+    td:first-child { width: 52%; }
+    code { background: var(--tint); padding: 2px 6px; border-radius: 6px; font-size: .9em; }
+    hr { border: 0; border-top: 1px solid var(--border); margin: 28px 0; }
+    footer { max-width: 780px; margin: 0 auto; padding: 4px 20px 34px; color: var(--muted); font-size: 13px; text-align: center; }
+    footer a { color: var(--muted); }
+    @media (max-width: 560px) {
+      article { padding: 24px 18px 20px; border-radius: 22px; }
+      h1 { font-size: 26px; }
+      table { font-size: 13.5px; } th, td { padding: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <span class="mark"><svg viewBox="0 0 24 24"><rect x="3" y="6.5" width="18" height="13" rx="4"/><path d="M6.5 6.5l9-3a2 2 0 0 1 2.5 1.5v1.5"/><circle cx="16.5" cy="13" r="1.1" fill="#fff" stroke="none"/></svg></span>
+      <b>Walyo</b>
+    </a>
+    <nav>
+      <a href="{{ '/privacy-fr' | relative_url }}"{% if page.url contains 'privacy-fr' %} aria-current="page"{% endif %}>Confidentialité</a>
+      <a href="{{ '/privacy-en' | relative_url }}"{% if page.url contains 'privacy-en' %} aria-current="page"{% endif %}>Privacy</a>
+      <a href="{{ '/delete-account' | relative_url }}"{% if page.url contains 'delete-account' %} aria-current="page"{% endif %}>Supprimer / Delete</a>
+    </nav>
+  </header>
+  <main><article>{{ content }}</article></main>
+  <footer>Walyo · Houmor Studio · <a href="mailto:walyo.app@gmail.com">walyo.app@gmail.com</a></footer>
+</body>
+</html>

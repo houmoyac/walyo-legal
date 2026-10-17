@@ -1,4 +1,6 @@
 ---
+title: Supprimer mon compte / Delete my account
+lang: fr
 ---
 # Walyo : supprimer mon compte et mes données / Delete my account and data
 
