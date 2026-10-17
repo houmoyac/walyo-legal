@@ -2,7 +2,7 @@
 ---
 # Politique de confidentialité de Walyo
 
-*Dernière mise à jour : 13 octobre 2026*
+*Dernière mise à jour : 17 octobre 2026*
 
 Walyo est une application qui sert à suivre vos abonnements (montants, dates de paiement, rappels). Cette page explique, simplement, quelles informations l'application utilise, où elles sont conservées et ce que vous pouvez en faire.
 
@@ -24,8 +24,8 @@ Contact : walyo.app@gmail.com
 
 | Information | À quoi elle sert |
 |---|---|
-| Votre **adresse e-mail** | vous identifier, vous envoyer des codes de vérification, retrouver votre compte |
-| Votre **prénom ou pseudo** | afficher « Bonjour, … » |
+| Votre **adresse e-mail** (saisie par vous, ou fournie par Google si vous choisissez « Continuer avec Google ») | vous identifier, vous envoyer des codes de vérification, retrouver votre compte |
+| Votre **prénom ou pseudo** (ou le nom de votre compte Google, si vous vous connectez avec Google) | afficher « Bonjour, … » |
 | Votre **mot de passe**, jamais en clair : seulement une empreinte cryptographique irréversible (Argon2id) | vous connecter |
 | Vos **abonnements** : nom du service, prix, fréquence, date du prochain paiement, date de début, catégorie, couleur, identifiant du logo | les retrouver sur un nouveau téléphone et les garder à jour entre vos appareils |
 | Des **jetons de connexion** (stockés sous forme d'empreinte) | vous garder connecté sur chaque téléphone, et vous déconnecter à distance |
@@ -43,6 +43,7 @@ Nous n'utilisons ces informations que pour faire fonctionner Walyo.
 | **Render** (hébergement du serveur, région Francfort) | fait tourner notre serveur | les requêtes de l'application (et donc vos données chiffrées en transit) |
 | **Neon** (base de données, région Francfort) | conserve les comptes et abonnements | les données listées ci-dessus |
 | **Resend** (envoi d'e-mails) | envoie les codes de vérification | votre adresse e-mail et le code |
+| **Connexion avec Google** (Google Sign-In, sur Android, facultative) | vous permet de créer ou de retrouver votre compte sans mot de passe | Google reçoit la demande de connexion ; nous recevons de Google votre **adresse e-mail**, votre **nom** et un identifiant de compte. Nous ne recevons ni votre mot de passe Google, ni vos contacts, ni aucune autre donnée de votre compte Google |
 | **API de recherche d'Apple** (`itunes.apple.com`) | trouve l'icône officielle d'une application | le nom du service (par exemple « Netflix ») et le code de votre pays |
 | **Wikidata** (`wikidata.org`) | retrouve le site officiel d'une marque que vous saisissez | le nom de la marque que vous tapez |
 | **Service d'icônes de sites de Google** (`gstatic.com`) | affiche l'icône d'un site web | l'adresse du site du service (par exemple « netflix.com ») |
@@ -56,6 +57,8 @@ Les trois derniers ne reçoivent ni vos prix, ni vos dates, ni votre compte, ni 
 - **Internet** : pour votre compte, la synchronisation et les logos.
 
 ## Mot de passe et verrouillage
+
+Si vous vous connectez avec Google, vous n'avez pas de mot de passe Walyo : l'application se déverrouille alors avec votre téléphone (code, Face ID ou empreinte). Vous pouvez à tout moment supprimer votre compte depuis l'application, ce qui efface les données que nous avons reçues de Google.
 
 Un seul mot de passe sert à votre compte et au verrouillage de l'application. Si vous l'oubliez, vous pouvez en choisir un nouveau grâce à un code envoyé à votre adresse e-mail ; vos données sont conservées. Changer de mot de passe déconnecte vos autres téléphones.
 

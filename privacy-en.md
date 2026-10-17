@@ -2,7 +2,7 @@
 ---
 # Walyo Privacy Policy
 
-*Last updated: 13 October 2026*
+*Last updated: 17 October 2026*
 
 Walyo is an app for keeping track of your subscriptions (amounts, payment dates, reminders). This page explains, in plain words, what information the app uses, where it is kept and what you can do with it.
 
@@ -24,8 +24,8 @@ Contact: walyo.app@gmail.com
 
 | Information | What it is for |
 |---|---|
-| Your **e-mail address** | identify you, send you verification codes, recover your account |
-| Your **first name or nickname** | show "Hello, …" |
+| Your **e-mail address** (typed by you, or provided by Google if you choose "Continue with Google") | identify you, send you verification codes, recover your account |
+| Your **first name or nickname** (or the name of your Google account, if you sign in with Google) | show "Hello, …" |
 | Your **password**, never in clear text: only an irreversible cryptographic hash (Argon2id) | sign you in |
 | Your **subscriptions**: service name, price, frequency, next payment date, start date, category, colour, logo identifier | get them back on a new phone and keep your devices up to date |
 | **Sign-in tokens** (stored as a hash) | keep you signed in on each phone, and sign you out remotely |
@@ -43,6 +43,7 @@ We only use this information to make Walyo work.
 | **Render** (server hosting, Frankfurt region) | runs our server | the app's requests (so your data, encrypted in transit) |
 | **Neon** (database, Frankfurt region) | stores accounts and subscriptions | the data listed above |
 | **Resend** (e-mail sending) | sends the verification codes | your e-mail address and the code |
+| **Sign in with Google** (Google Sign-In, on Android, optional) | lets you create or recover your account without a password | Google receives the sign-in request; we receive from Google your **e-mail address**, your **name** and an account identifier. We receive neither your Google password, nor your contacts, nor any other data from your Google account |
 | **Apple's search API** (`itunes.apple.com`) | finds a service's official app icon | the service name (e.g. "Netflix") and your country code |
 | **Wikidata** (`wikidata.org`) | finds the official website of a brand you type | the brand name you type |
 | **Google's website icon service** (`gstatic.com`) | shows a website's icon | the service's website address (e.g. "netflix.com") |
@@ -56,6 +57,8 @@ The last three receive neither your prices, your dates, your account nor any ide
 - **Internet**: for your account, synchronisation and logos.
 
 ## Password and lock
+
+If you sign in with Google, you have no Walyo password: the app is then unlocked with your phone (code, Face ID or fingerprint). You can delete your account from the app at any time, which erases the data we received from Google.
 
 One password serves your account and the lock of the app. If you forget it, you can choose a new one with a code sent to your e-mail address; your data is kept. Changing the password signs your other phones out.
 
